@@ -1,11 +1,11 @@
 sudo: required
 services:
- - Docker
+ - docker
 #before install test our project
 before_install:
  - docker build -f ./client/Dockerfile.dev -t myproject:latest ./client
 #run test script
-script
+script:
  - docker run -it myproject:latest npm test -- --coverage
 # make docker images
 after_install:
@@ -13,12 +13,9 @@ after_install:
  - docker build -t 7015214645/test-server ./server
  - docker build -t 7015214645/test-nginx ./nginx
  - docker build -t 7015214645/test-worker ./worker
-
 # docker login
  - echo "DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-
 # push docker images to docker hub
-
  - docker push 7015214645/test-client
  - docker push 7015214645/test-server
  - docker push 7015214645/test-nginx
