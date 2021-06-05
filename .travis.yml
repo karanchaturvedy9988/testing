@@ -14,7 +14,7 @@ after_install:
  - docker build -t 7015214645/test-nginx ./nginx
  - docker build -t 7015214645/test-worker ./worker
 # docker login
- - echo "DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+ - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # push docker images to docker hub
  - docker push 7015214645/test-client
  - docker push 7015214645/test-server
