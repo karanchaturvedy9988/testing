@@ -9,14 +9,14 @@ script:
  - docker run -it myproject:latest npm test -- --coverage
 # make docker images
 after_success:
- - docker build -t 7015214645/testClient ./client
- - docker build -t 7015214645/testServer ./server
- - docker build -t 7015214645/testNginx ./nginx
- - docker build -t 7015214645/testWorker ./worker
+ - docker build -t 7015214645/test-Client ./client
+ - docker build -t 7015214645/test-Server ./server
+ - docker build -t 7015214645/test-Nginx ./nginx
+ - docker build -t 7015214645/test-Worker ./worker
 # docker login
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # push docker images to docker hub
- - docker push 7015214645/testClient
- - docker push 7015214645/testServer
- - docker push 7015214645/testNginx
- - docker push 7015214645/testWorker 
+ - docker push 7015214645/test-client
+ - docker push 7015214645/test-server
+ - docker push 7015214645/test-nginx
+ - docker push 7015214645/test-worker 
