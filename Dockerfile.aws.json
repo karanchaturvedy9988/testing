@@ -1,0 +1,17 @@
+{
+  "AWSEBDockerfileVersion": 2;
+   "ContainerDefinitions":[
+    {
+       "name":"client";
+       "image":"7015214645/test-client";
+       "hostname":"client";
+       "essential":false
+    },
+    {
+     
+    
+    }
+  ]
+
+
+}
