@@ -16,7 +16,7 @@ after_success:
 # docker login
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # push docker images to docker hub
- - docker push 7015214645/test-client
- - docker push 7015214645/test-server
- - docker push 7015214645/test-nginx
- - docker push 7015214645/test-worker 
+ - docker push 7015214645/testClient
+ - docker push 7015214645/testServer
+ - docker push 7015214645/testNginx
+ - docker push 7015214645/testWorker 
