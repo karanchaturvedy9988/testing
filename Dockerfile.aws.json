@@ -1,5 +1,5 @@
 {
-  "AWSEBDockerfileVersion": 2;
+  "AWSEBDockerfileVersion": 2,
    "ContainerDefinitions": [
     {
        "name": "client",
