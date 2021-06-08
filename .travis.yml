@@ -20,6 +20,7 @@ after_success:
  - docker push 7015214645/test-server
  - docker push 7015214645/test-nginx
  - docker push 7015214645/test-worker 
+#how to deploy on beanstalk
 deploy:
   provider: elasticbeanstalk
   region: us-east-2
